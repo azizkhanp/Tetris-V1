@@ -35,7 +35,7 @@ resource "google_container_node_pool" "node_pool" {
   node_config {
     service_account = google_service_account.node_service_account.email
     disk_size_gb = "10"
-    machine_type = "e2-medium" # Replace with your desired machine type
+    machine_type = "e2-small" # Replace with your desired machine type
     # Additional node configurations
   }
 }
