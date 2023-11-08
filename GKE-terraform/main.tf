@@ -5,7 +5,7 @@ resource "google_container_cluster" "gke-cluster" {
   deletion_protection ="false"
 
   node_pool {
-    name       = "default-pool"
+    name       = "node-pool"
     initial_node_count = 1
     
   }
