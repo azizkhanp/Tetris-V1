@@ -3,14 +3,8 @@ resource "google_container_cluster" "gke-cluster" {
   name     = "gke-cluster"
   location = "us-west4"
   deletion_protection ="false"
-
-  node_pool {
-    name       = "node-pool"
-    initial_node_count = 1
-    
-  }
-
-  # Additional configurations like network, node configuration, etc.
+  initial_node_count = 2
+  remove_default_node_pool = true
 }
 
 # Create a service account for the GKE nodes
