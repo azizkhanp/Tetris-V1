@@ -13,10 +13,10 @@ resource "google_service_account" "node_service_account" {
 }
 
 # Grant necessary permissions to the service account
-resource "google_project_iam_member" "node_service_account_roles" {
+resource "google_project_iam_member" "service_account_permissions" {
   project = "devops-403405"
-  role = "roles/compute.viewer" # Replace with the necessary role
-  member = "serviceAccount:${google_service_account.node_service_account.email}"
+  role    = "roles/container.admin" # Replace with the necessary role
+  member  = "serviceAccount:node-sa@devops-403405.iam.gserviceaccount.com"
 }
 
 # Create a GKE node pool
