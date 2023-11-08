@@ -28,8 +28,8 @@ resource "google_project_iam_member" "node_service_account_roles" {
 # Create a GKE node pool
 resource "google_container_node_pool" "node_pool" {
   name       = "node-pool"
-  location   = google_container_cluster.example_cluster.location
-  cluster    = google_container_cluster.example_cluster.name
+  location   = google_container_cluster.gke-cluster.location
+  cluster    = google_container_cluster.gke-clusterr.name
   node_count = 1
 
   node_config {
