@@ -1,7 +1,7 @@
 # Create a GKE cluster
 resource "google_container_cluster" "gke-cluster" {
   name     = "gke-cluster"
-  location = "us-west4"
+  location = "us-east1"
   deletion_protection ="false"
   initial_node_count = 2
   remove_default_node_pool = true
