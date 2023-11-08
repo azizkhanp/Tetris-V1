@@ -3,7 +3,7 @@ resource "google_container_cluster" "gke-cluster" {
   name     = "gke-cluster"
   location = "us-east1"
   deletion_protection ="false"
-  initial_node_count = 2
+  initial_node_count = 1
   remove_default_node_pool = true
 }
 
