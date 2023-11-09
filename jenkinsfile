@@ -1,6 +1,11 @@
 pipeline{
     agent any
     stages {
+        stage('Clean Workspace') {
+            steps {
+                deleteDir() // This will clean the workspace before executing subsequent steps
+            }
+        }
         stage('Checkout from Git'){
             steps{
                 git branch: 'main', url: 'https://github.com/azizkhanp/Tetris-V1.git'
