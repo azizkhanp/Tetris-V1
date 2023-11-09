@@ -4,7 +4,7 @@ resource "google_container_cluster" "gke-k8s" {
   location                 = "us-east1-b" 
   remove_default_node_pool = true
   initial_node_count       = 1
-  deletion_protection      = false
+  deletion_protection      = "false"
   network                  = google_compute_network.gke-vpc.self_link
   subnetwork               = google_compute_subnetwork.pri-sub.self_link
   #logging_service          = "logging.googleapis.com/kubernetes"
@@ -14,6 +14,7 @@ resource "google_container_cluster" "gke-k8s" {
   # Optional, if you want multi-zonal cluster
   node_locations = [
     "us-east1-c" 
+    
   ]
 
   addons_config {
