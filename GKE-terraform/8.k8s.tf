@@ -1,7 +1,7 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_cluster
 resource "google_container_cluster" "gke-k8s" {
   name                     = "gke-k8s"
-  location                 = "us-east1" 
+  location                 = "us-east1-a" 
   remove_default_node_pool = true
   initial_node_count       = 1
   network                  = google_compute_network.gke-vpc.self_link
@@ -12,7 +12,7 @@ resource "google_container_cluster" "gke-k8s" {
 
   # Optional, if you want multi-zonal cluster
   node_locations = [
-    "us-east1" 
+    "us-east1-b" 
   ]
 
   addons_config {
