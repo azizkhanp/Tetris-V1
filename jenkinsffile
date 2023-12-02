@@ -64,7 +64,7 @@ pipeline{
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image sevenajay/tetrisv1:latest > trivyimage.txt" 
+                sh "trivy image aziz0545/tetrisv1:latest > trivyimage.txt" 
             }
         }
         stage('Checkout Code') {
