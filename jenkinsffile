@@ -5,7 +5,7 @@ pipeline{
         nodejs 'node16'
     }
     environment {
-        SCANNER_HOME=tool 'sonar-scanner'
+        SCANNER_HOME=tool 'sonar-server'
         GIT_REPO_NAME = "Tetris-manifest"
         GIT_USER_NAME = "azizkhanp"
     }
